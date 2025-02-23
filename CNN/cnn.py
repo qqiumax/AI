@@ -14,8 +14,8 @@ import time
 transform = transforms.ToTensor()
 
 # Data
-train_data = datasets.MNIST(root='C_nn/mnist_train_data', train=True, download=True, transform=transform)
-test_data = datasets.MNIST(root='C_nn/mnist_test_data', train=False, download=True, transform=transform)
+train_data = datasets.MNIST(root='CNN/mnist_train_data', train=True, download=True, transform=transform)
+test_data = datasets.MNIST(root='CNN/mnist_test_data', train=False, download=True, transform=transform)
 
 # Batch size
 train_loader = DataLoader(train_data, batch_size=3, shuffle=True)
@@ -116,7 +116,7 @@ current_time = start_time
 total_time = current_time - start_time
 print(f'Total time: {total_time/60} minutes')
 
-torch.save(model.state_dict(), 'C_nn/handwritten_number_pred.pth')
+torch.save(model.state_dict(), 'CNN/handwritten_number_pred.pth')
 
 test_load = DataLoader(test_data, batch_size=10000, shuffle=False)
 with torch.no_grad():
