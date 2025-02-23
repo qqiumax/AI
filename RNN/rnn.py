@@ -15,8 +15,8 @@ train_data = datasets.MNIST(root='RNN/mnist_train_data', train=True, download=Tr
 test_data = datasets.MNIST(root='RNN/mnist_test_data', train=False, download=True, transform=transform)
 
 # Batch size
-train_loader = DataLoader(train_data, batch_size=32, shuffle=True)
-test_loader = DataLoader(test_data, batch_size=32, shuffle=False)
+train_loader = DataLoader(train_data, batch_size=3, shuffle=True)
+test_loader = DataLoader(test_data, batch_size=3, shuffle=False)
 
 # Define RNN
 class RecurrentNetwork(nn.Module):
@@ -34,16 +34,16 @@ class RecurrentNetwork(nn.Module):
         return F.log_softmax(out, dim=1)
 
 input_size = 28  # Each row of the image
-hidden_size = 128
+hidden_size = 256
 output_size = 10
-num_layers = 5
+num_layers = 6
 
 torch.manual_seed(37)
 model = RecurrentNetwork(input_size, hidden_size, output_size, num_layers)
 print(model)
 
 criterion = nn.CrossEntropyLoss()
-optimizer = torch.optim.Adam(model.parameters(), lr=0.001)
+optimizer = torch.optim.Adam(model.parameters(), lr=0.0001)
 
 start_time = time.time()
 
