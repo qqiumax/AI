@@ -94,7 +94,7 @@ current_time = time.time()
 total_time = current_time - start_time
 print(f'Total time: {total_time/60} minutes')
 
-torch.save(model.state_dict(), 'RNN/handwritten_number_pred.pth')
+torch.save(model.state_dict(), 'RNN/rnn_handwritten_number_pred.pth')
 
 test_load = DataLoader(test_data, batch_size=10000, shuffle=False)
 with torch.no_grad():
