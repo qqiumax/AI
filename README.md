@@ -15,6 +15,10 @@ AI-Project
 │   └── cnn.py
 ├── RNN
 │   └── rnn.py
+├── GRU
+│   └── gru.py
+├── LSTM
+│   └── lstm.py
 ├── requirements.txt
 └── README.md
 ```
@@ -24,6 +28,8 @@ AI-Project
 - **ANN (Artificial Neural Network)**: Implements a basic feedforward neural network to classify the Iris dataset.
 - **CNN (Convolutional Neural Network)**: Implements a convolutional neural network to classify handwritten digits from the MNIST dataset.
 - **RNN (Recurrent Neural Network)**: Implements a recurrent neural network for classifying handwritten digits from the MNIST dataset.
+- **GRU (Gate Recurrent Unit Neural Network)**: Implements a gate recurrent unit neural network for classifying handwritten digits from the MNIST dataset.
+- **LSTM (Long-Short Term Neural Network)**: Implements a long-short term neural network for classifying handwritten digits from the MNIST dataset.
 
 ## Setup Instructions
 
@@ -60,7 +66,16 @@ AI-Project
   ```
   python RNN/rnn.py
   ```
+- To train the GRU model on the MNIST dataset, run:
+  ```
+  python GRU/gru.py
+  ```
+- To train the LSTM model on the MNIST dataset, run:
+  ```
+  python LSTM/lstm.py
+  ```
+
 
 ## License
 
-This project is licensed under the MIT License.
+This project is licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International Public License License.
