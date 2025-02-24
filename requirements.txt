@@ -1,5 +1,0 @@
-torch==2.6.0
-torchvision==0.21.0
-pandas==2.2.3
-scikit-learn==1.6.1
-matplotlib==3.10.0
